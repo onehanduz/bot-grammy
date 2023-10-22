@@ -2,7 +2,7 @@ FROM node:18.1-alpine as appbuild
 
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm install
 COPY . .
 RUN npm run build
 
